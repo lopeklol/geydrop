@@ -19,7 +19,7 @@ To start the project, follow these steps:
 
 To use reCaptcha, you need to create your own reCaptcha keys on [Google reCaptcha Admin](https://www.google.com/recaptcha/admin/create) and paste them into your `.env` file.
 
-> **Note:**  
+> [!Note]  
 > reCaptcha doesn't work on `localhost`, so you won't be able to use it there.
 
 ## Original Project
@@ -27,5 +27,5 @@ To use reCaptcha, you need to create your own reCaptcha keys on [Google reCaptch
 My original Geydrop project is available here:  
 [https://lopeklol.fanth.pl/projects/keydrop/disclaimer.html](https://lopeklol.fanth.pl/projects/keydrop/disclaimer.html)
 
-> **Caution:**  
+> [!Caution]  
 > This website is entirely fictional and meant as a joke. It is not the real KeyDrop site and does not serve any profit-making purposes. No deposits or withdrawals can be made here. Everything on this site, including the terms and conditions, is fictional.
