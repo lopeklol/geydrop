@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #e77272;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: red;
+        }
+        p {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: not-allowed;
+            border-radius: 5px;
+            opacity: 0.5;
+        }
+        button.enabled {
+            cursor: pointer;
+            opacity: 1;
+        }
+    </style>
+    <script>
+        function startCountdown() {
+            let timeLeft = 9;
+            const button = document.getElementById('continueButton');
+            const countdownText = document.getElementById('countdown');
+            
+            const timer = setInterval(() => {
+                countdownText.textContent = `You can proceed in ${timeLeft} seconds...`;
+                timeLeft--;
+                
+                if (timeLeft < 0) {
+                    clearInterval(timer);
+                    button.classList.add('enabled');
+                    button.disabled = false;
+                    countdownText.textContent = "You can now proceed.";
+                }
+            }, 1000);
+        }
+        
+        window.onload = startCountdown;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Warning!</h1>
+        <p>This website is entirely fictional and is meant as a joke.</p>
+        <p>It is not the real KeyDrop site and has no profit-making purpose.</p>
+        <p>No deposits or withdrawals can be made here.</p>
+        <p>Everything on this site is fictional, including the terms and conditions.</p>
+        <p id="countdown">You can proceed in 10 seconds...</p>
+        <button id="continueButton" disabled onclick="window.location.href='./'">Go to the site</button>
+    </div>
+</body>
+</html>

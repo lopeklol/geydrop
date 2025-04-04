@@ -1,0 +1,27 @@
+ErrorDocument 404 /keydrop/error_40_and_4.html
+ErrorDocument 403 /keydrop/error_403.html
+
+RewriteEngine On
+RewriteRule ^add_funds$ add_funds.php [L]
+RewriteRule ^add_case add_case.php [L]
+RewriteRule ^banned$ banned.php [L]
+RewriteRule ^cases$ cases.php [L]
+RewriteRule ^case/(.*)$ case.php?case=$1 [L]
+RewriteRule ^delete_account$ delete_account.php [L]
+RewriteRule ^disclaimer$ disclaimer.html [L]
+RewriteRule ^error_40_and_4$ error_40_and_4.php [L]
+RewriteRule ^error_403$ error_403.php [L]
+RewriteRule ^$ index.php [L]
+RewriteRule ^inventory$ inventory.php [L]
+RewriteRule ^item/(.*)$ item.php?id=$1 [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^logout$ logout.php [L]
+RewriteRule ^logout_everywhere$ logout_everywhere.php [L]
+RewriteRule ^manage_user/(.*)$ manage_user.php?id=$1 [L]
+RewriteRule ^manage_case/(.*)$ manage_case.php?id=$1 [L]
+RewriteRule ^profile$ profile.php [L]
+RewriteRule ^register$ register.php [L]
+RewriteRule ^sell$ sell.php [L]
+RewriteRule ^tos$ tos.php [L]
+RewriteRule ^upgrade$ upgrade.php [L]
+RewriteRule ^upgrader$ upgrader.php [L]
